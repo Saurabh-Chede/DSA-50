@@ -73,7 +73,7 @@ function ReverseArray(arr) {
   return reverse;
 }
 
-console.log(ReverseArray(Input));
+// console.log(ReverseArray(Input));
 
 function checkSortedArray(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
@@ -82,7 +82,7 @@ function checkSortedArray(arr) {
     }
   }
 
-  return -1;
+  return true;
 }
 // console.log(checkSortedArray(Input));
 
@@ -121,7 +121,7 @@ function findDuplicates(arr) {
   return duplicates;
 }
 
-console.log(findDuplicates(Input));
+// console.log(findDuplicates(Input));
 
 // First non-repeating element
 
