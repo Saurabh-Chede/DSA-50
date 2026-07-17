@@ -146,3 +146,41 @@ function nonRepeatEL(arr) {
 }
 
 console.log(nonRepeatEL(Input));
+
+// majority elemet
+
+function majorityEl(arr) {
+  let frequency = {};
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (frequency[arr[i]]) {
+      frequency[arr[i]]++;
+    } else {
+      frequency[arr[i]] = 1;
+    }
+  }
+
+  for (let key in frequency) {
+    if (frequency[key] > arr.length / 3) {
+      result.push(Number(key));
+    }
+  }
+
+  return result;
+}
+
+console.log(majorityEl([1, 2, 2, 2, 2, 3, 3, 3, 5, 5]));
+
+// Reverse string
+
+function ReverseStr(str) {
+  let result = "";
+  for (let i = str.length-1; i >= 0; i--) {
+    result += str[i];
+  }
+
+  return result;
+}
+
+console.log(ReverseStr("saurabh"));
