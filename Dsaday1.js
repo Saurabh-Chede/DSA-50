@@ -170,17 +170,67 @@ function majorityEl(arr) {
   return result;
 }
 
-console.log(majorityEl([1, 2, 2, 2, 2, 3, 3, 3, 5, 5]));
+// console.log(majorityEl([1, 2, 2, 2, 2, 3, 3, 3, 5, 5]));
 
 // Reverse string
 
 function ReverseStr(str) {
   let result = "";
-  for (let i = str.length-1; i >= 0; i--) {
+  for (let i = str.length - 1; i >= 0; i--) {
     result += str[i];
   }
 
   return result;
 }
 
-console.log(ReverseStr("saurabh"));
+// console.log(ReverseStr("saurabh"));
+
+function removeDupFromSArray(arr) {
+  if (arr.length === 0) return 0;
+
+  let i = 0;
+
+  for (let j = 1; j < arr.length; j++) {
+    if (arr[j] !== arr[i]) {
+      i++;
+      arr[i] = arr[j];
+    }
+  }
+
+  return i + 1;
+}
+
+console.log(removeDupFromSArray([1, 2, 3, 3, 4, 5, 6]));
+
+// merged sorted arrays
+
+function mergedSortedArr(arr1, arr2) {
+  let i = 0;
+  let j = 0;
+  let result = [];
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] <= arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
+    }
+  }
+
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+  }
+
+  return result
+}
+
+console.log(mergedSortedArr([1,2,3],[4,5,6]));
+
