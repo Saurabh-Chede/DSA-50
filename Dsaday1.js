@@ -234,3 +234,28 @@ function mergedSortedArr(arr1, arr2) {
 
 console.log(mergedSortedArr([1,2,3],[4,5,6]));
 
+// group anagrams 
+
+function groupAnagrams (strs) {
+
+  let map = new Map()
+
+  for(const word of strs){
+    let key = word.split('').sort().join('')
+
+    if(!map.has(key) ){
+      map.set(key,[])
+    }
+
+    map.get(key).push(word)
+  }
+
+  return [...map.values()]
+
+}
+
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+
+
+
+
