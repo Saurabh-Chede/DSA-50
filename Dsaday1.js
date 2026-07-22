@@ -272,12 +272,22 @@ function checkPalindrome(str) {
 
 // console.log(checkPalindrome('TENET'));
 
-// —— cout vowels from string.
+// —— count vowels from string.
 
-function countVowels (str){
-  let count = 0
+function countVowels(str) {
+  let count = 0;
+  let vowels = "aeiou";
 
+  str = str.toLowerCase();
+
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+
+  return count;
 }
 
-
+console.log(countVowels('saurabh'));
 
