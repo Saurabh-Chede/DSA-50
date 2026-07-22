@@ -183,7 +183,7 @@ function ReverseStr(str) {
   return result;
 }
 
-// console.log(ReverseStr("saurabh"));
+console.log(ReverseStr("saurabh"));
 
 function removeDupFromSArray(arr) {
   if (arr.length === 0) return 0;
@@ -229,33 +229,55 @@ function mergedSortedArr(arr1, arr2) {
     j++;
   }
 
-  return result
+  return result;
 }
 
-console.log(mergedSortedArr([1,2,3],[4,5,6]));
+console.log(mergedSortedArr([1, 2, 3], [4, 5, 6]));
 
-// group anagrams 
+// group anagrams
 
-function groupAnagrams (strs) {
+function groupAnagrams(strs) {
+  let map = new Map();
 
-  let map = new Map()
+  for (const word of strs) {
+    let key = word.split("").sort().join("");
 
-  for(const word of strs){
-    let key = word.split('').sort().join('')
-
-    if(!map.has(key) ){
-      map.set(key,[])
+    if (!map.has(key)) {
+      map.set(key, []);
     }
 
-    map.get(key).push(word)
+    map.get(key).push(word);
   }
 
-  return [...map.values()]
-
+  return [...map.values()];
 }
 
 console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
 
+function checkPalindrome(str) {
+  let left = 0;
+  let right = str.length - 1;
+
+  while (left < right) {
+    if (str[left] !== str[right]) {
+      return `— not a palindrome`;
+    }
+
+    left++;
+    right--;
+  }
+
+  return `— str is plaindrome`;
+}
+
+// console.log(checkPalindrome('TENET'));
+
+// —— cout vowels from string.
+
+function countVowels (str){
+  let count = 0
+
+}
 
 
 
