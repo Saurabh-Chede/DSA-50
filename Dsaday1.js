@@ -272,6 +272,7 @@ function checkPalindrome(str) {
 
 // console.log(checkPalindrome('TENET'));
 
+
 // —— count vowels from string.
 
 function countVowels(str) {
@@ -289,5 +290,8 @@ function countVowels(str) {
   return count;
 }
 
-console.log(countVowels('saurabh'));
+// console.log(countVowels('saurabh'));
+
+
+
 
