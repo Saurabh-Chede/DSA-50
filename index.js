@@ -88,3 +88,7 @@ function RemoveDuplicates(arr) {
 
 console.log(RemoveDuplicates([1, 2, 3, 3, 4, 4, 5]));
 
+function keepDuplicates () {
+  
+}
+
