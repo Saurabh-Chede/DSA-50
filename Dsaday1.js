@@ -292,6 +292,3 @@ function countVowels(str) {
 
 //  —— find middle node
 
-function findMiddleNode () {
-  
-}
