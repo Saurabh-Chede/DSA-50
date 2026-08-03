@@ -290,5 +290,3 @@ function countVowels(str) {
   return count;
 }
 
-//  —— find middle node
-
